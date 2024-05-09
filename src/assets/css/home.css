@@ -1,0 +1,282 @@
+.container .home form {
+  width: 100%;
+  min-height: 9em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4em 6em;
+}
+.container .home form .selectInput {
+  width: 30%;
+  cursor: pointer;
+  font-family: "Orbitron", sans-serif;
+}
+.container .home form .inptBox {
+  width: 40%;
+  height: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--bxShadow);
+  border-radius: 0.5em;
+  padding: 0em 2em;
+  gap: 2em;
+}
+.container .home form .inptBox input {
+  width: 100%;
+  height: inherit;
+  border: none;
+  outline: none;
+  color: var(--text);
+  background: transparent;
+}
+.container .home form .inptBox button {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.container .home form .inptBox .icon {
+  font-size: 2em;
+  cursor: pointer;
+}
+
+/* CHILD */
+.container .home .child {
+  width: 100%;
+  min-height: 70vh;
+  padding: 0em 6em;
+  position: relative;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+}
+.container .home .child .childScroll {
+  width: 100%;
+  height: calc(70vh - 7vh);
+  overflow-y: scroll;
+}
+.container .home .child .row {
+  width: 100%;
+  min-height: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4em;
+  margin: 2em 0em;
+  color: var(--text);
+  font-family: "Orbitron", sans-serif;
+}
+.container .home .child .row.header {
+  background: var(--text);
+  color: var(--bg);
+  margin: 0em 0em;
+}
+
+.container .home .child .row .token {
+  width: 250px;
+  height: inherit;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding-right: 1em;
+  border-right: 1px solid var(--text);
+}
+
+.container .home .child .row .token span {
+  font-size: 1.4em;
+  font-weight: 600;
+}
+.container .home .child .row .token img {
+  object-fit: contain;
+  width: 20px;
+  margin-left: 1em;
+}
+.container .home .child .row.header .token h1 {
+  font-weight: 600;
+  color: var(--bg);
+  text-align: center;
+}
+.container .home .child .row .token h1 {
+  font-size: 1.4em;
+  font-weight: 200;
+  margin-left: 0.5em;
+  color: var(--text);
+  text-align: left;
+}
+.container .home .child .row .token h2 {
+  font-size: 1em;
+  font-weight: 200;
+  margin-left: 1em;
+}
+
+.container .home .child .row .subrow {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  gap: 6em;
+  padding-right: 1em;
+  /* border-right: 1px solid var(--text); */
+}
+.container .home .child .row .subrow h2 {
+  width: 150px;
+  white-space: nowrap;
+  text-align: center;
+  border-right: 1px solid var(--text);
+}
+
+/* EMPTY  */
+.empty{
+  display: flex;
+  width: auto;
+  height: auto;
+  padding: 1em 2em;
+  gap: 2em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.empty .icon{
+font-size: 15em;
+color: var(--text);
+}
+.empty h1{
+font-size: 4em;
+font-family: "Orbitron", sans-serif;
+color: var(--text);
+}
+
+/* LOADER  */
+.loader {
+  width: 68px;
+  height: 68px;
+  border: 3px dotted var(--text);
+  border-style: solid solid dotted dotted;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px dotted var(--text);
+  border-style: solid solid dotted;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  animation: rotationBack 1s linear infinite;
+  transform-origin: center center;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+
+
+
+
+
+/* ••••••••••••••••MOBILE RESPONSIVENESS••••••••••••••••••••••••••• */
+
+@media (max-width: 768px) {
+  .container .home form {
+    /*  */
+    padding: 4em 2em;
+    gap: 2em;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .container .home form .selectInput {
+    width: 100%;
+  }
+  .container .home form .inptBox {
+    width: 100%;
+  }
+
+  /* CHILD */
+  .container .home .child {
+    width: 100%;
+    min-height: 70vh;
+    padding: 0em 2em;
+  }
+  .container .home .child .childScroll {
+    width: 100%;
+    height: calc(70vh - 7vh);
+    overflow-y: scroll;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+  }
+  .container .home .child .row {
+    margin: 1em 0em;
+    gap: 2em;
+  }
+  .container .home .child .row .token {
+    width: 35%;
+  }
+
+  .container .home .child .row .token span {
+    font-size: 1em;
+    font-weight: 600;
+  }
+  .container .home .child .row .token img {
+    width: 10px;
+    margin-left: 0.5em;
+  }
+  .container .home .child .row .token h1 {
+    font-size: 1em;
+    margin-left: 0.5em;
+  }
+  .container .home .child .row .token h2 {
+    font-size: 0.5em;
+    margin-left: 0.2em;
+  }
+  .container .home .child .row .subrow {
+    display: flex;
+    align-items: center;
+    gap: 6em;
+    padding-right: 1em;
+    width: 70%;
+    overflow-x: scroll;
+  }
+  .container .home .child .row .subrow h2 {
+    font-size: 1em;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    height: 20px;
+    overflow: visible;
+    padding-right: 1em;
+    /* border: 1px solid brown; */
+  }
+
+  /* LOADER  */
+  .loader {
+    top: 45%;
+    left: 40%;
+  }
+}
