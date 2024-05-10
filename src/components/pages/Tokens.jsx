@@ -25,7 +25,7 @@ function Tokens() {
         `https://topmemebe-1.onrender.com/getErc20TokenHolders/${id}/${addr}`
       );
       setMemeHolders(res.data);
-      console.log(res.data);
+      // console.log(res.data);
       setloading(false);
     } catch (error) {
       setloading(false);
