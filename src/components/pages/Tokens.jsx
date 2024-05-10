@@ -22,14 +22,14 @@ function Tokens() {
     try {
       setloading(true);
       const res = await axios.get(
-        `https://topmemebe-1.onrender.com/getErc20TokenHolders/${id}/${addr}`
+        `https://topmemebe-1.onrender.com/getErc20TokenHolders/Base/0x532f27101965dd16442e59d40670faf5ebb142e4`
       );
       setMemeHolders(res.data);
-      // console.log(res.data);
+      console.log(res.data);
       setloading(false);
     } catch (error) {
       setloading(false);
-      // console.log(error);
+      console.log(error);
     }
   };
 
