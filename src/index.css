@@ -76,9 +76,10 @@ body {
   align-items: center;
   justify-content: center;
   gap: 4em;
+  padding: 0em 2em;
 }
 .container nav .logo {
-  font-size: 4em;
+  font-size: 3em;
 }
 .container nav .bulb{
   font-size: 3em;
