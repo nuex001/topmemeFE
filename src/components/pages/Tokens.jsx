@@ -22,7 +22,7 @@ function Tokens() {
     try {
       setloading(true);
       const res = await axios.get(
-        `https://topmemebe-1.onrender.com/getErc20TokenHolders/Base/0x532f27101965dd16442e59d40670faf5ebb142e4`
+        `https://topmemebe-1.onrender.com/getErc20TokenHolders/${id}/${addr}`
       );
       setMemeHolders(res.data);
       console.log(res.data);
